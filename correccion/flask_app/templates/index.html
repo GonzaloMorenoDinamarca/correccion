@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/CSS/style.css') }}">
+    </head>
+    <body>
+            <div class="contenedor-p">
+                <form action="/registro" method="post">
+                <div class="contenedor">
+                    <h1>Registrate</h1>
+                    <div class="contenido">
+                        <div class="casilla">
+                            {% with messages = get_flashed_messages() %}     
+                                {% if messages %}                            
+                                    {% for message in messages %}            
+                                        <p>{{message}}</p>                   
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                            <label for="first_name">Nombres:</label>
+                            <div>
+                                <div><input type="text" name="first_name"></div>
+                            </div>
+                        </div>
+                        <div class="casilla">
+                            <label for="last_name">Apellidos:</label>
+                            <div>
+                                <input type="text" name="last_name">
+                            </div>
+                        </div>
+                        <div class="casilla">
+                            <label for="email">Correo:</label>
+                            <div>
+                                <input type="email" name="email">
+                            </div>
+                        </div>
+                        <div class="casilla">
+                            <label for="password">Contrasena</label>
+                            <div>
+                                <input type="password" name="password">
+                            </div>
+                        </div>
+                        <div class="casilla">
+                            <label for="confirm">Repite tu contrasena</label>
+                            <div>
+                                <input type="password" name="confirm">
+                            </div>
+                        </div>
+                    </div>  
+                    <input  class="enviar" type="submit" value="Crear cuenta">
+                </form>
+                </div>
+                
+                <div class="b">
+                    <form action="/login", method="post">
+                    <h1>Inicio de sesion</h1>
+                    <div class="casilla">
+                        <label for="email">Correo:</label>
+                        <div>
+                            <input type="email" name="email">
+                        </div>
+                    </div>
+                    <div class="casilla">
+                        <label for="password">Contrasena</label>
+                        <div>
+                            <input type="password" name="password">
+                        </div>
+                        <input  class="enviar-2" type="submit" value="Iniciar sesion">
+                    </div>
+                </form>
+                </div>  
+            </div>      
+    </body>
+</html>

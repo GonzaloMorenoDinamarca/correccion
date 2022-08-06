@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carl Dealz</title>
+    </head>
+    <body>
+        <div>
+            <h1>Put Car Up For Sale</h1>
+            <a href='/dashboard'><button>Dashboard</button></a>
+            <a href='/logout'><button>Logout</button></a>
+        </div>
+        {% with messages = get_flashed_messages() %}     
+        {% if messages %}                            
+            {% for message in messages %}            
+                <p>{{message}}</p>                   
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+        
+        <form action="/agregar/auto", method="post">
+            <div class="casilla">
+                <label for="price">Price:</label>
+                <div>
+                    <input type="number" name="price">
+                </div>
+            </div>
+            <div class="casilla">
+                <label for="model">Model:</label>
+                <div>
+                    <input type="text" name="model">
+                </div>
+            </div>
+            <div class="casilla">
+                <label for="make">Make:</label>
+                <div>
+                    <input type="text" name="make">
+                </div>
+            </div>
+            <div class="casilla">
+                <label for="year">Year:</label>
+                <div>
+                    <input type="number" name="year">
+                </div>
+            </div>
+            <div class="casilla">
+                <label for="description">Description:</label>
+                <div>
+                    <textarea name="description"> </textarea>
+                </div>
+            </div>
+            <input type="submit" value="Add">
+        </form>
+    </body>
+</html>

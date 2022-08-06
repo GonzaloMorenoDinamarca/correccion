@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(72, 134, 173);
+}
+.contenedor {
+    background-color: rgb(73, 79, 87);
+    width: 34em;
+    color: white;
+    padding: 1em;
+}
+.contenido {
+    width: 20em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+    font-size: large;
+    
+}
+
+.contenedor-p {
+    display: flex;
+    margin: 3em auto;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+input{
+    width: 35em;
+    height: 2.2em;
+    border-radius: 4px;
+}
+.casilla {
+    margin: 1em auto;
+}
+
+.enviar {
+    width: 8em;
+    margin-left: 10em; 
+    background-color: white;
+    color: black;
+    font-size: large;
+}
+
+label { 
+    font-weight: bold;
+}
+.b {
+    background-color: rgb(73, 79, 87);
+    width: 34em;
+    color: white;
+    padding: 1em;
+}
+.enviar-2 {
+    margin-top: 1em;
+    width: 8em;
+    margin-left: 8em;
+    font-size: large;
+}
+
